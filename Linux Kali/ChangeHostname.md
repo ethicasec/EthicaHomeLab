@@ -1,5 +1,5 @@
 
-## 🐳 HOW TO CHANGE HOSTANME IN KALI LINUX
+## 🦄 How to Change Hostname in Kali Linux 
 
 #### 1. Check Hostname
 
