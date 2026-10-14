@@ -1,49 +1,52 @@
 
 ### 🐳 Change Hostname in Kali Linux
 
-#### CHECK HOSTNAME
+#### 1. Check Hostname
 
 ```bash
 hostnamectl
 ```
-#### Set Hostname i.e > devshomes
+#### 2. Set Hostname i.e devshomes
 
 ```bash
 sudo hostnamectl set-hostname devhomes
 ```
-#### UPDATE /etc/hosts file
+#### 3. Update hosts File path: **/etc/hosts** file
+
 ```bash
 sudo nano /etc/hosts
 ```
 
-#### Paste below code or write in same format
+#### 4. Paste below code or write in same format
 ````bash
 127.0.0.1       localhost
 127.0.1.1       devhomes.local devhomes
 # 192.168.29.76   devhomes.local devhomes
 ````
-#### OR IF YOU WANT DNS HOSTNAME
+> | or if you want a server name **dns**
+
 ````bash
 127.0.0.1       localhost
 127.0.1.1       dns.devhome.local dns
 # 192.168.29.76   dns.devhome.local dns
 ````
 
-#### UPDATE /etc/hosts file
+#### 5. Check Hostname
 ```bash
 cat /etc/hostname
 ```
 > OR
+
 ```bash
 echo "dns" | sudo tee /etc/hostname
 ```
 
-### RESTART SERVICE 
+### 6. Restart hostname service *[ if needed ]*
 ```bash
 sudo systemctl restart systemd-hostnamed
 ```
 
-### REBOOT SYSTEM
+### Reboot System *[if needed]*
 ```bash
 sudo reboot
 ```
