@@ -1,5 +1,5 @@
 
-### 🐳 Change Hostname in Kali Linux
+## 🐳 HOW TO CHANGE HOSTANME IN KALI LINUX
 
 #### 1. Check Hostname
 
@@ -23,7 +23,7 @@ sudo nano /etc/hosts
 127.0.1.1       devhomes.local devhomes
 # 192.168.29.76   devhomes.local devhomes
 ````
-> | or if you want a server name **dns**
+> [!NOTE] or if you want a server name like *dns*
 
 ````bash
 127.0.0.1       localhost
@@ -35,6 +35,7 @@ sudo nano /etc/hosts
 ```bash
 cat /etc/hostname
 ```
+
 > OR
 
 ```bash
@@ -46,11 +47,11 @@ echo "dns" | sudo tee /etc/hostname
 sudo systemctl restart systemd-hostnamed
 ```
 
-### Reboot System *[if needed]*
+### Reboot System _[if needed]_
 ```bash
 sudo reboot
 ```
-### VERIFY AGAIN
+### Verify Again
 
 ```bash
 hostname
