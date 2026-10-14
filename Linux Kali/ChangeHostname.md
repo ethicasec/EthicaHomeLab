@@ -21,14 +21,14 @@ sudo nano /etc/hosts
 ````bash
 127.0.0.1       localhost
 127.0.1.1       devhomes.local devhomes
-# 192.168.29.76   devhomes.local devhomes
+# 192.168.29.10   devhomes.local devhomes
 ````
 > [!NOTE] or if you want a server name like *dns*
 
 ````bash
 127.0.0.1       localhost
 127.0.1.1       dns.devhome.local dns
-# 192.168.29.76   dns.devhome.local dns
+# 192.168.29.10   dns.devhome.local dns
 ````
 
 #### 5. Check Hostname
@@ -58,3 +58,8 @@ hostname
 hostname -f
 hostnamectl
 ```
+
+> [!NOTE]
+Recommended Hostname for DNS server setup : dns
+FQDN: dns.devhome.local
+IP: 192.168.29.10
