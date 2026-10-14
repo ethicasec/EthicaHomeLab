@@ -6,7 +6,7 @@
 ```bash
 hostnamectl
 ```
-#### SET HOSTNAME i.e
+#### Set Hostname i.e > devshomes
 
 ```bash
 sudo hostnamectl set-hostname devhomes
@@ -33,21 +33,23 @@ sudo nano /etc/hosts
 ```bash
 cat /etc/hostname
 ```
-OR
+> OR
+```bash
 echo "dns" | sudo tee /etc/hostname
+```
 
-RESTART SERVICE 
+### RESTART SERVICE 
 ```bash
 sudo systemctl restart systemd-hostnamed
 ```
 
-REBOOT SYSTEM
+### REBOOT SYSTEM
 ```bash
 sudo reboot
 ```
-VERIFY AGAIN
+### VERIFY AGAIN
 
-```poewrshell
+```bash
 hostname
 hostname -f
 hostnamectl
