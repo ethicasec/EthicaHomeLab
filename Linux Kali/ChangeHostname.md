@@ -47,11 +47,11 @@ echo "dns" | sudo tee /etc/hostname
 sudo systemctl restart systemd-hostnamed
 ```
 
-### Reboot System _[if needed]_
+### 7. Reboot System *[ if needed ]*
 ```bash
 sudo reboot
 ```
-### Verify Again
+### 8. Verify Again
 
 ```bash
 hostname
