@@ -3,9 +3,11 @@
 
 Step 1: Find your network interface name
 
-```powershell
+```bash
 ip a
 ```
-```powershell
-docker compose up -d
+Step 2: List your netplan config files
+
+```bash
+ls /etc/netplan/
 ```
