@@ -42,16 +42,16 @@ cat /etc/hostname
 echo "dns" | sudo tee /etc/hostname
 ```
 
-### 6. Restart hostname service *[ if needed ]*
+#### 6. Restart hostname service *[ if needed ]*
 ```bash
 sudo systemctl restart systemd-hostnamed
 ```
 
-### 7. Reboot System *[ if needed ]*
+#### 7. Reboot System *[ if needed ]*
 ```bash
 sudo reboot
 ```
-### 8. Verify Again
+#### 8. Verify Again
 
 ```bash
 hostname
