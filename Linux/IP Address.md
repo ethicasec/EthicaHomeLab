@@ -1,9 +1,11 @@
 
-### 🐳 Docker Command
+### 🐳 Configure IP Address Gateway DNS in ubuntu
 
-```bash
-docker compose down
+Step 1: Find your network interface name
+
+```powershell
+ip a
 ```
-```bash
+```powershell
 docker compose up -d
 ```
