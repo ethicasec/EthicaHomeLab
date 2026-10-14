@@ -1,5 +1,5 @@
 
-🐳 Docker Command
+🐳 DNS TESTING CMDs
 
 ```bash
 docker compose down
