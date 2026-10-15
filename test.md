@@ -18,26 +18,26 @@ This project provides a simple solution for managing DNS and network configurati
 - VMware Workstation
 - 4 GB RAM
 
-  > [!NOTE]
-  > Ye ek note hai
+  >[!NOTE]
+  >Ye ek note hai
 
-  > [!TIP]
-  > Ye TIP hai
+  >[!TIP]
+  >Ye TIP hai
   
-  > [!IMPORTANT]
-  > Ye ek IMPORTANT hai
+  >[!IMPORTANT]
+  >Ye ek IMPORTANT hai
 
-  > [!WARNING]
-  > Ye warning hai
+  >[!WARNING]
+  >Ye warning hai
   
-  > [!CAUTION]
-  > Ye ek CAUTION hai
+  >[!CAUTION]
+  >Ye ek CAUTION hai
 
 |Language   | Code fence
 |--------------|--------------|
-|Bash / Linux	 |```bash|
-|PowerShell	   |```powershell|
-|Python	|```python|
+|Bash / Linux	 | ```bash|
+|PowerShell	   | ```powershell|
+|Python	| ```python|
 |JavaScript|	```javascript|
 |PHP	| ```php|
 |SQL	| ```sql|

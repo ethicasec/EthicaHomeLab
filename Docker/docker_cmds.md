@@ -40,6 +40,4 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 > After installation, verify that Docker is running:
 > `sudo systemctl status docker `
 > If Docker is not running, start it manually:
-> ```bash 
-sudo systemctl start docker 
-```
+> ```bash sudo systemctl start docker ```
