@@ -30,3 +30,10 @@ sudo systemctl status ssh
 sudo ufw allow ssh
 sudo ufw status
 ```
+> [!NOTE]
+> Enable and disable firewall
+
+```powershell
+sudo ufw enable
+sudo ufw disable
+```
