@@ -31,6 +31,15 @@ EOF
 
 sudo apt update
 ```
+>[!NOTE]
+>You can copy installation method code and make a .sh file and then run it using nano cmd
+```bash
+sudo nano dockerinstallation.sh
+```
+```bash
+sudo chmod +x ./dockerinstallation.sh
+sudo ./dockerinstallation.sh
+```
 
 #### Install the Docker packages.
 
