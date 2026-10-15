@@ -7,15 +7,10 @@
 sudo docker stop <portainer_name_or_id>
 ```
 
-#### 2.Reset Portainer Password:
+#### 2. Reset Portainer Password:
 ```bash
 sudo docker run --rm -v portainer_data:/data portainer/helper-reset-password
 ```
-
->[!NOTE]
->Token har restart par badal sakta hai, isliye hamesha latest logs se hi token lein. Admin account ban jaane ke baad token ki zarurat nahi padti.
-
-
 #### 3. Result Show on Screen like this
     Status: Downloaded newer image for portainer/helper-reset-password:latest
     {"level":"info","filename":"portainer.db","time":"2026-10-04T16:39:49Z","message":"loading PortainerDB"}
