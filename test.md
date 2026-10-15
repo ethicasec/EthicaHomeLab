@@ -37,7 +37,7 @@ This project provides a simple solution for managing DNS and network configurati
   >[!CAUTION]
   >Ye ek CAUTION hai
 
-|Language   | Code fence
+|Language   | Code fence |
 |--------------|--------------|
 |Bash / Linux	 | ```bash|
 |PowerShell	   | ```powershell|
