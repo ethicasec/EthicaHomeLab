@@ -17,19 +17,23 @@ This project provides a simple solution for managing DNS and network configurati
 - Windows Server 2022
 - VMware Workstation
 - 4 GB RAM
-<!-- 
+
   >[!NOTE]
   >Ye ek note hai
+---
 
   >[!TIP]
   >Ye TIP hai
-  
+---
+
   >[!IMPORTANT]
   >Ye ek IMPORTANT hai
+---
 
   >[!WARNING]
-  >Ye warning hai -->
-  
+  >Ye warning hai
+
+  ---
   >[!CAUTION]
   >Ye ek CAUTION hai
 
