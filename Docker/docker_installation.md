@@ -36,7 +36,7 @@ sudo apt update
 ```bash
 sudo nano dockerinstallation.sh
 ```
-#### PASTE ABOVE CODE IN THIS FILE AND SAVE
+> PASTE ABOVE CODE IN THIS FILE AND SAVE
 
 ```bash
 sudo chmod +x ./dockerinstallation.sh
