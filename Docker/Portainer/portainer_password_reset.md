@@ -1,9 +1,13 @@
 
 ### 🐳 Docker: Portainer Installation Commands Listed Here
 
+#### 1. Stop Portainer:
+
 ```bash
 sudo docker stop <portainer_name_or_id>
 ```
+
+#### 2.Reset Portainer Password:
 ```bash
 sudo docker run --rm -v portainer_data:/data portainer/helper-reset-password
 ```
@@ -12,7 +16,7 @@ sudo docker run --rm -v portainer_data:/data portainer/helper-reset-password
 >Token har restart par badal sakta hai, isliye hamesha latest logs se hi token lein. Admin account ban jaane ke baad token ki zarurat nahi padti.
 
 
-## Result Show on Screen like this
+#### 3. Result Show on Screen like this
     Status: Downloaded newer image for portainer/helper-reset-password:latest
     {"level":"info","filename":"portainer.db","time":"2026-10-04T16:39:49Z","message":"loading PortainerDB"}
     2026/10/04 16:39:50 Password successfully updated for user: admin
@@ -22,6 +26,7 @@ sudo docker run --rm -v portainer_data:/data portainer/helper-reset-password
 >[!IMPORTANT]
 >Kindly note Temporary Password and use with your user account and also change it.
 
+#### 4. Start Portainer:
 ```bash
 docker start <portainer_name_or_id>
 ```
