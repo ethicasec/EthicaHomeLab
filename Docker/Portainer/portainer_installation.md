@@ -103,12 +103,23 @@ Permission denied on docker commands: prefix with sudo or add your user to the d
 Can’t reach the UI: check that port 9443 isn’t blocked by a firewall (e.g. sudo ufw allow 9443).
 Security: mounting docker.sock gives Portainer full control of Docker, so don’t expose the UI publicly without strong credentials, and ideally put it behind a VPN or reverse proxy.
  
- ## Docker Useful Commands:
+ 
+ ## 🍧Portainer Useful Commands:
+
+|Use For    |Command|
+|-----------|--------------|
+|Start	    |sudo docker start portainer|
+|Stop	      |sudo docker stop portainer|
+|Restart	  |sudo docker restart portainer|
+|Logs	      |sudo docker logs portainer|
+|Status	    |sudo docker compose ps|
+
+ ## 🍧Docker Useful Commands:
 
 |Use For    |Command|
 |-----------|--------------|
 |Start	    |sudo docker compose up -d|
-|Stop	    |sudo docker compose stop|
-|Restart	|sudo docker compose restart|
-|Logs	    |sudo docker compose logs -f|
+|Stop	      |sudo docker compose stop|
+|Restart	  |sudo docker compose restart|
+|Logs	      |sudo docker compose logs -f|
 |Status	    |sudo docker compose ps|
