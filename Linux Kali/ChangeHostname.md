@@ -23,7 +23,8 @@ sudo nano /etc/hosts
 127.0.1.1       devhomes.local devhomes
 # 192.168.29.10   devhomes.local devhomes
 ````
-> [!NOTE] or if you want a server name like *dns*
+> [!NOTE] 
+> or if you want a server name like *dns*
 
 ````bash
 127.0.0.1       localhost
