@@ -1,6 +1,8 @@
 
 ### 🐳 Install Docker Engine on Ubuntu
 
+>go to [ DOCKER OFFICIAL LINK ](https://docs.docker.com/engine/install/ubuntu/)
+
 #### Uninstall old versions
 
 ```bash
@@ -35,7 +37,9 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 > [!NOTE]
-After installation, verify that Docker is running:
-> ```bash sudo systemctl status docker ```
-If Docker is not running, start it manually:
-> ```bash sudo systemctl start docker ```
+> After installation, verify that Docker is running:
+> `sudo systemctl status docker `
+> If Docker is not running, start it manually:
+> ```bash 
+sudo systemctl start docker 
+```

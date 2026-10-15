@@ -1,27 +1,50 @@
-# My Project
+# GIT MD FORMATTING PAGE
 
 > A short description of what this project does.
 
 ## 📋 Overview
 
-This project provides a simple solution for managing DNS
-and network configuration.
+This project provides a simple solution for managing DNS and network configuration.
 
 ## ✨ Features
 
 - DNS filtering
 - Local DNS resolution
 - Network monitoring
-- HTTPS support
-- Easy configuration
 
 ## 🛠️ Requirements
 
 - Windows Server 2022
 - VMware Workstation
 - 4 GB RAM
-- 20 GB storage
-- Static IP address
+
+  > [!NOTE]
+  > Ye ek note hai
+
+  > [!TIP]
+  > Ye TIP hai
+  
+  > [!IMPORTANT]
+  > Ye ek IMPORTANT hai
+
+  > [!WARNING]
+  > Ye warning hai
+  
+  > [!CAUTION]
+  > Ye ek CAUTION hai
+
+|Language   | Code fence
+|--------------|--------------|
+|Bash / Linux	 |```bash|
+|PowerShell	   |```powershell|
+|Python	|```python|
+|JavaScript|	```javascript|
+|PHP	| ```php|
+|SQL	| ```sql|
+|JSON	| ```json|
+|YAML	| ```yaml|
+|HTML	| ```html|
+
 
 ## 📦 Installation
 
@@ -106,15 +129,5 @@ Also verify that port `53` is not blocked.
 - [ ] DoH support
 - [ ] DoT support
 - [ ] Monitoring dashboard
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 👤 Author
-
-Your Name
-
----
 
 ⭐ If you find this project useful, consider giving it a star!
