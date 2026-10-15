@@ -47,3 +47,7 @@ sudo systemctl status docker
 ```bash
 sudo systemctl start docker 
 ```
+>Run First Program hello-word
+```bash
+sudo docker run hello-world
+```
