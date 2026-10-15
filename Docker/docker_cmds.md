@@ -6,19 +6,16 @@ docker --version
 ```bash
 sudo systemctl status docker
 ```
-```bash
+```powershell
 sudo docker ps
 ```
 ```bash
 sudo docker images
 ```
 ```bash
-sudo docker ps
-```
-```bash
 sudo docker volume ls
 ```
-```bash
+```powershell
 sudo docker compose up -d
 ```
 ```bash
@@ -30,7 +27,7 @@ sudo docker network ls
 ```bash
 sudo docker network inspect bridge
 ```
-```bash
+```powershell
 sudo docker start APPLICATION_NAME
 ```
 ```bash
