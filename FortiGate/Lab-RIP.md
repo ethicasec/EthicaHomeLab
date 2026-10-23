@@ -9,6 +9,7 @@
 #### 1. Check Hostname :
 
 ```
+config t
 hostname ISP
 ```
 #### 2. Configure Interface f0/0 :
@@ -31,6 +32,17 @@ ip address 192.168.100.100 255.255.255.0
 >[!NOTE]
 >Loopback we can also provide subnet 255.255.255.255 or /32
 
+### RIP Configuration Cisco end :
+
+```
+router rip
+version 2
+network 192.168.10.0
+network 8.8.8.8
+no auto-summary
+wr
+```
+
 
 ### Fortigate Firewall Configuration:
 
@@ -39,3 +51,5 @@ ip address 192.168.100.100 255.255.255.0
 ```
 show system interface ?
 ```
+### RIP Configuration Fortigate end :
+![alt text](ImgFortigateRIPConfig.png)
