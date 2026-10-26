@@ -24,5 +24,5 @@ Get-Service -Name "Apache2.4","mysql"
 
 | Service Name | Cmd |
 |---------|----------|
-| MySql | mysql |
-| Apache | apache2.4|
+| MySql Database| mysql |
+| Apache Server| apache2.4|
