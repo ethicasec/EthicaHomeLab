@@ -20,7 +20,7 @@ sudo nano 00-installer-config.yaml
 >[!NOTE]
 > Change ipv4 and ipv6 status true to false save and restart Network Manager
 
->[!INFO]
+>[!IMPORTANT]
 > For Set static  ip check below code
 
 ethca@ubuntu:/etc/netplan$ sudo cat 90-NM-ea056b1c-fd33-4d1d-ab16-3b40bd3a3e01.yaml 
