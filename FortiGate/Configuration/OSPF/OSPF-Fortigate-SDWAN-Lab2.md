@@ -42,7 +42,7 @@ graph LR
     SW1 ---|"192.168.1.0/24"| FG
     VPC["🖥️ VPC<br/>192.168.2.10/24"] --- SW2["🔀 SW2"]
     SW2 ---|"192.168.2.0/24"| FG
-    MGMT["☁️ MGMT"] --- FG["🧱 FortiGate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>port2: 192.168.1.100&nbsp;&nbsp;&nbsp;&nbsp;<br/>port3: 192.168.2.100&nbsp;&nbsp;&nbsp;&nbsp;<br/>port4: 192.168.100.100&nbsp;&nbsp;&nbsp;&nbsp;"]
+    MGMT["☁️ MGMT"] --- FG["🧱 FortiGate<br/>port2: 192.168.1.100<br/>port3: 192.168.2.100<br/>port4: 192.168.100.100"]
     FG ---|"192.168.100.0/24 • OSPF Area 0"| R["📡 R-Outside Cisco&nbsp;&nbsp;&nbsp;&nbsp;<br/>fa0/0: 192.168.100.200&nbsp;&nbsp;&nbsp;&nbsp;<br/>Lo1: 8.8.8.8/32&nbsp;&nbsp;&nbsp;&nbsp;<br/>Lo2: 4.4.4.4/32&nbsp;&nbsp;&nbsp;&nbsp;"]
 
     style FG fill:#EE3124,color:#fff,stroke:#8b1a12

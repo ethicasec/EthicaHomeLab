@@ -10,11 +10,15 @@
 ![SD-WAN](https://img.shields.io/badge/Feature-SD--WAN-8957e5?style=for-the-badge)
 ![Lab](https://img.shields.io/badge/Type-Hands--On%20Lab-orange?style=for-the-badge)
 
+
+![Lab](https://img.shields.io/badge/Level-Beginner_Friendly-22c55e?style=flat-square) ![Platform](https://img.shields.io/badge/Lab-EVE--NG_%7C_GNS3-8b5cf6?style=flat-square) ![Docs](https://img.shields.io/badge/Docs-GitHub_README-334155?style=flat-square)
+
+**Configure • Verify • Troubleshoot • Learn**
 </div>
 
 ---
 
-## 📑 Table of Contents
+## 📑 Quick navigation
 
 1. [🗺️ Topology](#️-topology)
 2. [📋 IP Addressing Table](#-ip-addressing-table)
@@ -30,7 +34,12 @@
 
 ## 🎯 Lab Objective
 
-FortiGate aur Cisco router (**R-Outside**) ke beech **OSPF Area 0** neighbor banana. FortiGate ka WAN interface (`port4`) **SD-WAN member** hai, aur dono LAN subnets OSPF me advertise hote hain. R-Outside ke loopbacks (`8.8.8.8`, `4.4.4.4`) internet simulate karte hain.
+- Establish OSPF adjacency between FortiGate `port4` and Cisco `Fa0/0`.
+- Advertise both FortiGate LAN subnets to Cisco.
+- Learn Cisco loopback host routes on FortiGate.
+- Permit LAN clients to reach the Cisco loopbacks through firewall policies.
+
+> 💡 **Scope:** Build working OSPF first. Multi-WAN SD-WAN is a separate extension.
 
 ---
 
@@ -181,6 +190,8 @@ config firewall policy
         set action accept
         set schedule "always"
         set service "ALL"
+        <!-- set service "PING" -->
+        <!-- set logtraffic all -->
         set nat disable
     next
     edit 2
@@ -192,6 +203,8 @@ config firewall policy
         set action accept
         set schedule "always"
         set service "ALL"
+        <!-- set service "PING" -->
+        <!-- set logtraffic all -->
     next
 end
 ```
@@ -255,6 +268,8 @@ get router info routing-table ospf
 get router info routing-table all
 diagnose sys sdwan health-check
 diagnose sys sdwan member
+execute ping-options source 192.168.100.100
+execute ping 192.168.100.200
 execute ping 8.8.8.8
 execute ping 4.4.4.4
 ```
@@ -267,11 +282,35 @@ execute ping 4.4.4.4
 show ip ospf neighbor
 show ip ospf interface brief
 show ip route ospf
+show ip protocols
+show ip interface brief
+ping 192.168.100.100
+ping 192.168.1.100 source FastEthernet0/0
+ping 192.168.2.100 source FastEthernet0/0
 ping 192.168.1.10 source Loopback1
 ping 192.168.2.10 source Loopback1
 ```
 
 ✔️ Expected: neighbor `1.1.1.1` state **FULL/DR** ya **FULL/BDR**, aur routes `O 192.168.1.0/24`, `O 192.168.2.0/24`.
+
+
+### Client testing
+
+```powershell
+# Windows
+ping 192.168.1.100
+ping 8.8.8.8
+ping 4.4.4.4
+tracert 8.8.8.8
+```
+
+```text
+# VPCS
+ping 192.168.2.100
+ping 8.8.8.8
+ping 4.4.4.4
+trace 8.8.8.8
+```
 
 ### 🚀 End-to-End Test
 
@@ -283,6 +322,31 @@ ping 192.168.2.10 source Loopback1
 | Win PC | `192.168.2.10` (VPC) | ✅ Reply |
 
 ---
+
+FortiGate additional diagnostics:
+
+```fortios
+diagnose ip router ospf all enable
+get router info ospf database
+```
+
+> Diagnostic commands vary by FortiOS release; use the supported `diagnose ip router ospf ?` options and disable debugging after use. Avoid enabling verbose debugging on production firewalls without a maintenance plan.
+
+## Expected routing path
+
+```text
+Windows 192.168.1.10
+    -> FortiGate port2 192.168.1.100
+    -> FortiGate port4 192.168.100.100
+    -> Cisco Fa0/0 192.168.100.200
+    -> Cisco Loopback0 8.8.8.8
+
+VPC 192.168.2.10
+    -> FortiGate port3 192.168.2.100
+    -> FortiGate port4 192.168.100.100
+    -> Cisco Fa0/0 192.168.100.200
+    -> Cisco Loopback1 4.4.4.4
+```
 
 ## 🧰 Troubleshooting
 

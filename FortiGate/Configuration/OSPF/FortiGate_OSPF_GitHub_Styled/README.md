@@ -45,10 +45,14 @@
 
 ```mermaid
 flowchart LR
-    A[🖥️ Windows LAN 1] --> F[🛡️ FortiGate]
-    B[💻 VPC LAN 2] --> F
-    F <-->|OSPF Area 0| C[🖧 Cisco R-Outside]
+    A[🖥️ Windows LAN 1] --> SW1["🔀 SW1"] --> |"192.168.1.0/24"| F[🛡️ FortiGate]
+
+    B[💻 VPC LAN 2] --> SW2["🔀 SW2"] -->|"192.168.2.0/24"| F["🛡️ FortiGate <br>port2: 192.168.1.100<br/>port3: 192.168.2.100<br/>port4: 192.168.100.100"]
+    
+    MGMT["☁️ MGMT"] <---> F<-->|OSPF Area 0| C[🖧 Cisco R-Outside]
+    
     C --> D[🎯 8.8.8.8/32]
+    
     C --> E[🎯 4.4.4.4/32]
 ```
 
@@ -327,7 +331,7 @@ VPC 192.168.2.10
 <div align="center">
 
 ### ⭐ Enjoyed this lab?
-**Star the repository • Fork it • Practice it in your own EVE-NG / GNS3 lab**
+**Star the repository • Fork it • Practice it in your own EVE-NG lab**
 
 *Made for network engineers and learners 🧑‍💻*
 
