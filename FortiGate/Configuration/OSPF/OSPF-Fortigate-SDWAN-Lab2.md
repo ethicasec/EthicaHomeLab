@@ -51,6 +51,20 @@ graph LR
     style VPC fill:#e8f5e9,stroke:#2ea44f,color:#000
 ```
 
+### 2.
+```mermaid
+flowchart LR
+    A[🖥️ Windows LAN 1] --> SW1["🔀 SW1"] --> |"192.168.1.0/24"| F[🛡️ FortiGate]
+
+    B[💻 VPC LAN 2] --> SW2["🔀 SW2"] -->|"192.168.2.0/24"| F
+    
+    MGMT["☁️ MGMT"] <---> F<-->|OSPF Area 0| C[🖧 Cisco R-Outside]
+    
+    C --> D[🎯 8.8.8.8/32]
+    
+    C --> E[🎯 4.4.4.4/32]
+```
+<!-- ["🛡️ FortiGate <br>port2: 192.168.1.100<br/>port3: 192.168.2.100<br/>port4: 192.168.100.100"] -->
 ---
 
 ## 📋 IP Addressing Table
