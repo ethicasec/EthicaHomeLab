@@ -47,7 +47,7 @@
 flowchart LR
     A[🖥️ Windows LAN 1] --> SW1["🔀 SW1"] --> |"192.168.1.0/24"| F[🛡️ FortiGate]
 
-    B[💻 VPC LAN 2] --> SW2["🔀 SW2"] -->|"192.168.2.0/24"| F["🛡️ FortiGate <br>port2: 192.168.1.100<br/>port3: 192.168.2.100<br/>port4: 192.168.100.100"]
+    B[💻 VPC LAN 2] --> SW2["🔀 SW2"] -->|"192.168.2.0/24"| F
     
     MGMT["☁️ MGMT"] <---> F<-->|OSPF Area 0| C[🖧 Cisco R-Outside]
     
@@ -55,7 +55,7 @@ flowchart LR
     
     C --> E[🎯 4.4.4.4/32]
 ```
-
+<!-- ["🛡️ FortiGate <br>port2: 192.168.1.100<br/>port3: 192.168.2.100<br/>port4: 192.168.100.100"] -->
 
 ## 🎯 1. Lab objective
 
