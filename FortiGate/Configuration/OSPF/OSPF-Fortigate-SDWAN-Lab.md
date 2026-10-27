@@ -36,20 +36,11 @@ FortiGate aur Cisco router (**R-Outside**) ke beech **OSPF Area 0** neighbor ban
 
 ## 🗺️ Topology
 
-```mermaid
-graph LR
-    Win["🖥️ Win PC<br/>192.168.1.10/24"] --- SW1["🔀 SW1"]
-    SW1 ---|"192.168.1.0/24"| FG
-    VPC["🖥️ VPC<br/>192.168.2.10/24"] --- SW2["🔀 SW2"]
-    SW2 ---|"192.168.2.0/24"| FG
-    MGMT["☁️ MGMT"] --- FG["🧱 FortiGate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>port2: 192.168.1.100&nbsp;&nbsp;&nbsp;&nbsp;<br/>port3: 192.168.2.100&nbsp;&nbsp;&nbsp;&nbsp;<br/>port4: 192.168.100.100&nbsp;&nbsp;&nbsp;&nbsp;"]
-    FG ---|"192.168.100.0/24 • OSPF Area 0"| R["📡 R-Outside Cisco&nbsp;&nbsp;&nbsp;&nbsp;<br/>fa0/0: 192.168.100.200&nbsp;&nbsp;&nbsp;&nbsp;<br/>Lo1: 8.8.8.8/32&nbsp;&nbsp;&nbsp;&nbsp;<br/>Lo2: 4.4.4.4/32&nbsp;&nbsp;&nbsp;&nbsp;"]
+<div align="center">
 
-    style FG fill:#EE3124,color:#fff,stroke:#8b1a12
-    style R fill:#1BA0D7,color:#fff,stroke:#0d5f80
-    style Win fill:#e8f5e9,stroke:#2ea44f,color:#000
-    style VPC fill:#e8f5e9,stroke:#2ea44f,color:#000
-```
+![Topology](topology.svg)
+
+</div>
 
 ---
 
